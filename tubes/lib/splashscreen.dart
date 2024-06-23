@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tubes/pages/login.dart';
+import 'package:tubes/login.dart';
 import 'package:tubes/styles/colors.dart';
 import 'package:tubes/styles/fonts.dart';
 

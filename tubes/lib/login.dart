@@ -4,7 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:tubes/auth/auth_repo.dart';
 import 'package:tubes/bloc/login/login_cubic.dart';
-import 'package:tubes/pages/homescreen.dart';
+import 'package:tubes/pages/navigationmenu.dart';
+import 'package:tubes/pages/home/homescreen.dart';
 import 'package:tubes/styles/colors.dart';
 import 'package:tubes/styles/fonts.dart';
 import 'package:tubes/utils/routes.dart';
@@ -31,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return await FirebaseAuth.instance.signInWithCredential(credential).then(
         (value) async => await Navigator.pushAndRemoveUntil(
             context,
-            MaterialPageRoute(builder: (context) => HomeScreen()),
+            MaterialPageRoute(builder: (context) => NavigationMenu()),
             (route) => false));
   }
 
@@ -61,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
               content: Text(state.msg),
               backgroundColor: Colors.green,
             ));
-          Navigator.pushNamedAndRemoveUntil(context, rHome, (route) => false);
+          Navigator.pushNamedAndRemoveUntil(context, rNav, (route) => false);
         }
       },
       child: Container(

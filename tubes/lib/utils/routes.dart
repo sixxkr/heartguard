@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tubes/pages/homescreen.dart';
-import 'package:tubes/pages/login.dart';
-import 'package:tubes/pages/register.dart';
+import 'package:tubes/pages/navigationmenu.dart';
+import 'package:tubes/pages/home/homescreen.dart';
+import 'package:tubes/login.dart';
+import 'package:tubes/register.dart';
 
 MaterialPageRoute _pageRoute(
         {required Widget body, required RouteSettings settings}) =>
@@ -19,6 +20,9 @@ Route? generateRoute(RouteSettings settings) {
     case rHome:
       _route = _pageRoute(body: HomeScreen(), settings: settings);
       break;
+    case rNav:
+      _route = _pageRoute(body: NavigationMenu(), settings: settings);
+      break;
   }
   return _route;
 }
@@ -27,3 +31,4 @@ final NAV_KEY = GlobalKey<NavigatorState>();
 const String rLogin = '/login';
 const String rRegister = '/register';
 const String rHome = '/home';
+const String rNav = '/nav';
