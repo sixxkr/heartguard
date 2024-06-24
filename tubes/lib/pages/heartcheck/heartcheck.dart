@@ -284,7 +284,7 @@ class _Heartcheck extends State<HeartCheck> {
           controller: thall,
         ),
         SizedBox(
-          height: 30,
+          height: 50,
         ),
         TextButton(
           onPressed: () => Predict(
@@ -328,6 +328,9 @@ class _Heartcheck extends State<HeartCheck> {
             );
           }
         })),
+        SizedBox(
+          height: 50,
+        ),
       ]),
     ));
   }

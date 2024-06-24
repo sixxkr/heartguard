@@ -27,7 +27,6 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(children: [
           SizedBox(
             height: 130,
-            width: 324,
           ),
           Text(
             'Heart Guard',
